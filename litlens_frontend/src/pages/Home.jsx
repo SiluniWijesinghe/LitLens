@@ -5,7 +5,7 @@ import ReviewList from "./ReviewList";
 const Home = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Navigation bar */}
+
       <nav className="bg-blue-500 p-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <Link to="/" className="text-white text-2xl font-bold">
@@ -14,11 +14,11 @@ const Home = () => {
         </div>
       </nav>
 
-      {/* Main content */}
+
       <div className="container mx-auto p-4">
         <ReviewList />
 
-        {/* Button to add a new review */}
+  
         <div className="mt-6 flex justify-center">
           <Link
             to="/add-review"

@@ -104,42 +104,41 @@ const ReviewList = () => {
 
       {/* Reviews */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredReviews.map((review) => (
-          <div
-            key={review.id}
-            className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
-          >
-            <h3 className="text-xl font-semibold text-gray-800">{review.bookTitle}</h3>
-            <h4 className="text-lg text-gray-600">{review.author}</h4>
-            <div className="flex items-center mt-2">
-              {'⭐'.repeat(review.rating)}
-            </div>
-            <p className="text-gray-700 mt-4">{review.reviewText}</p>
-            <small className="text-gray-500 mt-4 block text-right">
-              {new Date(review.dateAdded).toLocaleString()}
-            </small>
-
-             {/* Edit and Delete Buttons */}
-             <div className="flex justify-between mt-4">
-              {/* Edit Button */}
-              <button
-                onClick={() => handleEdit(review.id)}
-                className="text-blue-500 hover:text-blue-700"
-              >
-                <FaEdit className="inline-block mr-2" /> Edit
-              </button>
-
-              {/* Delete Button */}
-              <button
-                onClick={() => handleDelete(review.id)}
-                className="text-red-500 hover:text-red-700"
-              >
-                <FaTrash className="inline-block mr-2" /> Delete
-              </button>
-            </div>
-          </div>
-        ))}
+  {filteredReviews.map((review) => (
+    <div
+      key={review.id}
+      className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col"
+    >
+      <h3 className="text-xl font-semibold text-gray-800">{review.bookTitle}</h3>
+      <h4 className="text-lg text-gray-600">{review.author}</h4>
+      <div className="flex items-center mt-2">
+        {'⭐'.repeat(review.rating)}
       </div>
+      <p className="text-gray-700 mt-4 flex-grow">{review.reviewText}</p>
+      <small className="text-gray-500 mt-4 block text-right">
+        {new Date(review.dateAdded).toLocaleString()}
+      </small>
+
+      {/* Edit and Delete Buttons */}
+      <div className="flex justify-between mt-4 pt-2 border-t border-gray-300">
+        <button
+          onClick={() => handleEdit(review.id)}
+          className="text-blue-500 hover:text-blue-700"
+        >
+          <FaEdit className="inline-block mr-2" /> Edit
+        </button>
+
+        <button
+          onClick={() => handleDelete(review.id)}
+          className="text-red-500 hover:text-red-700"
+        >
+          <FaTrash className="inline-block mr-2" /> Delete
+        </button>
+      </div>
+    </div>
+  ))}
+</div>
+
     </div>
   );
 };

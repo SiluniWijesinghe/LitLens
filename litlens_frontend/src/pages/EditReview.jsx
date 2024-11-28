@@ -100,7 +100,7 @@ const EditReview = () => {
   };
 
   const handleBack = () => {
-    navigate(-1); // Go back to the previous page
+    navigate(-1); 
   };
 
   return (
