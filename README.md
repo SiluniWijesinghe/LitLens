@@ -1,6 +1,7 @@
 # LitLens
 
 ##Features Implemented
+
 CRUD Operations:
 Create, Read, Update, and Delete book reviews.
 Reviews contain the book title, author, rating (1 to 5 stars), and review text.
@@ -20,6 +21,7 @@ Built with Spring Boot for handling RESTful API endpoints.
 Reviews are stored in a MySQL database.
 
 ##Additional Notes
+
 Database Configuration:
 
 The application uses MySQL as the database to store the book reviews.
